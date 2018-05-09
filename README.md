@@ -12,3 +12,8 @@ Organisatoren ist ein Benutzer, welcher ein Event mit Terminvorschlägen erstell
 Teilnehmer können aus vorgeschlagenen Terminen und Zeiten eines Events auswählen. Weiters darf ein Teilnehmer seine Terminauswahl zu dem Event solange ändern, bis ein fixer Termin existiert. Des Weiteren darf der Teilnehmer Kommentare zu den Events, an denen er teilnimmt, posten.
 
 Es soll Notifications geben, bei denen Teilnehmer über Änderungen zu Events benachrichtigt werden. Es soll auch eine Nachricht geben, wenn ein fixer Termin für ein Event gefunden wurde. Für den Organisator soll es ebenfalls eine Benachrichtigung geben, wenn sich alle Teilnehmer zu seinem Event angemeldet haben. Wenn ein Benutzer gerade offline ist, und er eine Notification bekommt, soll diese so lange gespeichert werden, bis dieser wieder online ist.
+
+## Umsetzung
+
+## weitere Links
+[Aufgabenverteilung und Zeitaufzeichnung (Google Docs)](https://docs.google.com/spreadsheets/d/1VW-v6vQswtrJ8k9jyiZ7eBA__T3pAoMxwiI9BjSo2LU/edit?usp=sharing)
