@@ -1,16 +1,10 @@
-package hello;
-
-import data.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
-public class Application {
-
+public class Main {
+    @SuppressWarnings({ "deprecation", "unused", "unchecked" })
     public static void main(String[] args) {
         //creating configuration object
         Configuration cfg=new Configuration();
@@ -25,15 +19,12 @@ public class Application {
         //creating transaction object
         Transaction t=session.beginTransaction();
 
-        User u = new User("testuser", "test");
-        session.persist(u);
+        data.User u = new data.User("testuser", "test");
 
         t.commit();//transaction is commited
 
         session.close();
 
         System.out.println("successfully saved");
-        SpringApplication.run(Application.class, args);
     }
-
 }
