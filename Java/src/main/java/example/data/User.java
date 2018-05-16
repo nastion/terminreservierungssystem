@@ -1,4 +1,4 @@
-package data;
+package example.data;
 
 public class User {
     private Long ID;

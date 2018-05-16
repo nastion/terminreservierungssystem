@@ -31,6 +31,7 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-devtools")
+    compile("org.apache.tomcat.embed:tomcat-embed-jasper")
     compile("org.hibernate:hibernate-core:4.3.11.Final")
     compile group: 'com.h2database', name: 'h2', version: '1.3.148'
     testCompile("junit:junit")
