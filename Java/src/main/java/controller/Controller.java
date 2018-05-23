@@ -1,15 +1,24 @@
 package controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
+import data.User;
+import data.Event;
 
-/**
- *  This is the Controller for the View
- *
- * @author Alexander Hasenberger <ahasenberger@student.tgm.ac.at>
- * @version 2018-05-16
- */
-@org.springframework.stereotype.Controller
-@RequestMapping("")                 //Muss noch ausgefüllt werden
+import javax.jms.Session;
+
 public class Controller {
+
+	private User currentUser;
+
+	private Session session;
+
+	private Event event;
+
+	private EventController eventController;
+
+	private UserController userController;
+
+	public User getCurrentUser() {
+		return null;
+	}
 
 }
