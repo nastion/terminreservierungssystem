@@ -2,8 +2,7 @@ package controller;
 
 import data.User;
 import data.Event;
-
-import javax.jms.Session;
+import org.hibernate.Session;
 
 public class Controller {
 
