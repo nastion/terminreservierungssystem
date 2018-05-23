@@ -14,6 +14,11 @@ public class Poll implements Event {
 	private Date[] dates;
 	private Teilnehmer organisator;
 
+	private String descripition = null;
+	private String location = null;
+	private User user = null;
+	//private Controller controller;
+
 
 	public void setDate(Date date) {
 

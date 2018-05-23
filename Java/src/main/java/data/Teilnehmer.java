@@ -10,7 +10,10 @@ public class Teilnehmer implements User {
 	@GeneratedValue
 	private Poll poll;
 
-
+	private String name;
+	private String password = null;
+	//private Controller controller;
+	private Notification notification = null;
 
 
 	public void notify_User() {
