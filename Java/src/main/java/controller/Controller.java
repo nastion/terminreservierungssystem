@@ -1,13 +1,26 @@
 package controller;
 
-
-/**
- *  This is the Controller for the View
- *
- * @author Alexander Hasenberger <ahasenberger@student.tgm.ac.at>
- * @version 2018-05-16
- */
+import data.User;
+import data.Event;
+import org.hibernate.Session;
 
 public class Controller {
-    
+
+<<<<<<< HEAD
+=======
+	private User currentUser;
+
+	private Session session;
+
+	private Event event;
+
+	private EventController eventController;
+
+	private UserController userController;
+
+	public User getCurrentUser() {
+		return null;
+	}
+
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
 }
