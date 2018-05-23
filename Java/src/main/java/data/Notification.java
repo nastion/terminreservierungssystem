@@ -12,4 +12,8 @@ public class Notification {
 	private String text;
 	private String heading;
 
+    public Notification(String text, String heading) {
+        this.text = text;
+        this.heading = heading;
+    }
 }

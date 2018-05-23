@@ -1,5 +1,7 @@
 package data;
 
+import controller.Controller;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,14 +13,22 @@ public class Poll implements Event {
     @Id
     @GeneratedValue
     private int id;
-	private Date[] dates;
-	private Teilnehmer organisator;
+	private Date dates;
+	private User organisator;
 
 	private String descripition = null;
 	private String location = null;
 	private User user = null;
-	//private Controller controller;
+	private Controller controller;
 
+
+	public Poll(Date dates, User organisator, String descripition, String location, User user) {
+		this.dates = dates;
+		this.organisator = organisator;
+		this.descripition = descripition;
+		this.location = location;
+		this.user = user;
+	}
 
 	public void setDate(Date date) {
 
@@ -49,15 +59,15 @@ public class Poll implements Event {
 		this.id = id;
 	}
 
-	public Date[] getDates() {
+	public Date getDates() {
 		return dates;
 	}
 
-	public void setDates(Date[] dates) {
+	public void setDates(Date dates) {
 		this.dates = dates;
 	}
 
-	public Teilnehmer getOrganisator() {
+	public User getOrganisator() {
 		return organisator;
 	}
 

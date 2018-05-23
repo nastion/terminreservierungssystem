@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Webpage</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href="/signin.css" rel="stylesheet"/>
+    <script src="/signin.js"></script>
+    <style>
+        .hello {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <script type="text/javascript">
+        //alert("Hey");
+    </script>
+    <p th:text="'Hello, ' + ${name} + '!'" class="hello"/>
+    <p th:text="'User ' + ${name} + ' is existent: ' + ${is_existent} + ' and the passwort was correct: ' + ${password_correct}" />
+<form th:method="GET" th:action="@{/example/login}">
+    <input th:type="text" th:name="username" />
+    <input th:type="password" th:name="password" />
+    <input th:type="submit" th:value="Login" />
+</form>
+</body>
+</html>
