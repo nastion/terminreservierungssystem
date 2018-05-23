@@ -4,8 +4,8 @@ package data;
 public interface Event {
 
 	String descripition = null;
-	String location;
-	User user;
+	String location = null;
+	User user = null;
 	//private Controller controller;
 
 	void addTeilnehmer(User u);

@@ -3,10 +3,10 @@ package data;
 //import controller.Controller;
 
 public interface User {
-	private String name;
-	private String password;
+	 String name = null;
+	 String password = null;
 	//private Controller controller;
-	private Notification notification;
+	 Notification notification = null;
 
 	public abstract void notify_User();
 
