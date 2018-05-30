@@ -25,11 +25,7 @@
 
 		<!-- Drop and re-create the database schema on startup -->
 		<property name="hbm2ddl.auto">update</property>
-        <mapping class="data.User" />
-        <mapping class="data.Notification" />
-        <mapping class="data.Organisator" />
-        <mapping class="data.Poll" />
-        <mapping class="data.Comment" />
+		<mapping resource="user.hbm.xml" />
 	</session-factory>
   
 </hibernate-configuration>  

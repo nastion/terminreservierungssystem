@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>Dashboard</title>
+    <title th:text="${user1234} +' - Dashboard'"></title>
     <!--- Verlinkungen der Stylesheets Local + Web --->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -45,6 +45,9 @@
             </div>
         </div>
     </div>
+    <form th:action="@{/dashboard}" method="post" th:object="$[inputWrapper}">
+        <input type="text" th:field="*{input}" />
+    </form>
 </div>
 </body>
 </html>

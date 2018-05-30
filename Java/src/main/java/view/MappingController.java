@@ -1,7 +1,9 @@
 package view;
 
 import com.sun.org.apache.xpath.internal.operations.Mod;
+import example.data.InputWrapper;
 import example.data.User;
+import jdk.internal.util.xml.impl.Input;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,6 +11,7 @@ import org.hibernate.cfg.Configuration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -44,13 +47,26 @@ public class MappingController {
 
         modelAndView.setViewName("dashboard");
 
-        modelAndView.addObject("password_correct", pw_correct);
+        InputWrapper inputWrapper = new InputWrapper();
 
+        modelAndView.addObject("password_correct", pw_correct);
+        modelAndView.addObject("user1234", name);
+        modelAndView.addObject("inputWrapper", inputWrapper);
         modelAndView.addObject("name", name);
         modelAndView.addObject("is_existent", exists);
 
 
         session.close();
+        return modelAndView;
+    }
+
+    @PostMapping("/dashboard")
+    public ModelAndView dashboard(InputWrapper inputWrapper) {
+        System.out.println(inputWrapper.getInput());
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("name", "DefaultName");
+        modelAndView.addObject("inputWrapper", inputWrapper);
+        modelAndView.setViewName("dashboard");
         return modelAndView;
     }
 }
