@@ -17,7 +17,7 @@
             var parent = document.getElementById("EmailContainer");
             var input = document.createElement("input");
             input.placeholder="Teilnehmer";
-            input.classList.add("buttonStyle");
+            input.classList.add("textInputStyle");
             parent.appendChild(input)
 
         }
@@ -29,21 +29,21 @@
         <div class="col-sm">
             </br></br></br>
             <h4>Name</h4>
-            <input type="text" id="ErstellerName" class="buttonStyle"
+            <input type="text" id="ErstellerName" class="textInputStyle"
                    placeholder="Ersteller Name"/><br>
             </br>
             <h4>Ort</h4>
-            <input type="text" id="Ort" class="buttonStyle" placeholder="Ort"/><br>
+            <input type="text" id="Ort" class="textInputStyle" placeholder="Ort"/><br>
             </br>
             <h4>Beschreibung</h4>
-            <input type="text" id="Beschreibung" class="buttonStyle"
+            <input type="text" id="Beschreibung" class="textInputStyle"
                    placeholder="Beschreibung"/><br>
         </div>
         <div class="col-sm">
             <h2>Neues Event Erstellen</h2></br>
             <h4>Personen</h4>
             <div id="EmailContainer">
-                <input type="text" id="PersonenEmail" class="buttonStyle"
+                <input type="text" id="PersonenEmail" class="textInputStyle"
                        placeholder="Email der einzuladenden Person"/></br>
             </div>
             <button type="button" class="btn" onclick="addEmailInput()">+</button>
@@ -52,7 +52,7 @@
         <div class="col-sm">
             </br></br></br>
             <h4>Datum</h4>
-            <input type="date">
+            <input type="date" class="textInputStyle">
         </div>
     </div>
 </div>
