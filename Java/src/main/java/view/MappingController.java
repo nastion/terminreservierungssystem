@@ -69,4 +69,11 @@ public class MappingController {
         modelAndView.setViewName("dashboard");
         return modelAndView;
     }
+
+    @PostMapping("/signin")
+    public ModelAndView signin(String username, String password) {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.addObject("", username);
+        return modelAndView;
+    }
 }
