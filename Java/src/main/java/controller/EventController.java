@@ -1,5 +1,6 @@
 package controller;
 
+import data.Poll;
 import data.User;
 import data.Event;
 
@@ -13,6 +14,7 @@ public class EventController {
     }
 
 	public void createEvent(User organisator, Date[] dates, User[] teilnehmer) {
+		Event evt = new Poll();
 
 	}
 
@@ -30,16 +32,16 @@ public class EventController {
 		evt.notifyTeilnehmer();
 	}
 
-	public void addDescription(Event evt, String description) {
-
+	public void addDescription(Poll evt, String description) {
+		evt.setDescripition(description);
 	}
 
-	public void addLocation(Event evt, String location) {
-
+	public void addLocation(Poll evt, String location) {
+		evt.setLocation(location);
 	}
 
-	public void setDate(Event evt, Date date) {
-
+	public void setDate(Poll evt, Date date) {
+		evt.setDate(date);
 	}
 
 }
