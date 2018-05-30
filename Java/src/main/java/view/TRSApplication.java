@@ -1,4 +1,4 @@
-package boot;
+package view;
 
 import data.User;
 import org.hibernate.Session;
