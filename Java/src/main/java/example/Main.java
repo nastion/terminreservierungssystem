@@ -1,6 +1,7 @@
 package example;
 
 import data.*;
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -21,6 +22,11 @@ public class Main {
 
         //creating transaction object
         Transaction t=session.beginTransaction();
+
+
+        SQLQuery query = session.createSQLQuery("SHOW TABLES");
+        for (Object o: query.list())
+            System.out.println(o);
 
         User u = new User("testuser", "test");
         Poll p = new Poll();

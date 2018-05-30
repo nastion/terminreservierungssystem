@@ -1,4 +1,4 @@
-package example.hello;
+package boot;
 
 import data.User;
 import org.hibernate.Session;
@@ -9,7 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Application {
+public class TRSApplication {
 
     public static void main(String[] args) {
         //creating configuration object
@@ -25,15 +25,12 @@ public class Application {
         //creating transaction object
         Transaction t=session.beginTransaction();
 
-        User u = new User("testuser", "test");
-        session.persist(u);
-
         t.commit();//transaction is commited
 
         session.close();
 
         System.out.println("successfully saved");
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(TRSApplication.class, args);
     }
 
 }

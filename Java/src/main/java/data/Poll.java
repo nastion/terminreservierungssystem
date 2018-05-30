@@ -11,7 +11,7 @@ import java.util.Set;
 public class Poll implements Event {
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 
 	private Date[] dates;
 
@@ -59,14 +59,6 @@ public class Poll implements Event {
 	public void notifyTeilnehmer() {
         for (IUser t: teilnehmer)
             t.notify_User(this);
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public Date[] getDates() {

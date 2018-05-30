@@ -8,7 +8,7 @@ import javax.persistence.Id;
 public class Comment {
     @Id
     @GeneratedValue
-    private int id;
+    private Long id;
 
     private IUser poster;
     private String text;

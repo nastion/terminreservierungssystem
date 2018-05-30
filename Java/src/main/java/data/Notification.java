@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 public class Notification {
     @Id
     @GeneratedValue
-    private long id;
+    private Long id;
     @NotNull
 	private String text;
     @NotNull
