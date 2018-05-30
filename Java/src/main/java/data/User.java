@@ -9,7 +9,8 @@ import java.util.Set;
 @Entity
 public class User implements IUser {
     @Id
-    private int id;
+    @GeneratedValue
+    private Long id;
     @NotNull
     private String name;
     @NotNull
