@@ -7,6 +7,8 @@ import org.hibernate.Session;
 public class Controller {
     private User currentUser;
 
+    private Session session;
+
 	private EventController eventController;
 
 	private UserController userController;
@@ -35,4 +37,11 @@ public class Controller {
         this.userController = userController;
     }
 
+    public Session getSession() {
+        return session;
+    }
+
+    public void setSession(Session session) {
+        this.session = session;
+    }
 }

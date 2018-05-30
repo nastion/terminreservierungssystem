@@ -1,9 +1,10 @@
 package data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import controller.Controller;
+
+import javax.persistence.*;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -11,19 +12,37 @@ public class Poll implements Event {
     @Id
     @GeneratedValue
     private int id;
+
 	private Date[] dates;
 
 	private String descripition;
 	private String location;
-	private Set<IUser> teilnehmer;
 
+	@ManyToMany(mappedBy = "events")
+	private Set<User> teilnehmer;
+
+	@Transient
+	private Controller controller;
+
+	@OneToMany
 	private Set<Comment> comments;
 	//private Controller controller;
 
+    private Date date;
+
+    public Poll() {
+        this.teilnehmer = new HashSet<>();
+        this.comments = new HashSet<>();
+    }
 
 	public void setDate(Date date) {
-
+	    this.date = date;
+	    this.controller.getEventController().setDate(this, date);
 	}
+
+	public Date getDate() {
+	    return this.date;
+    }
 
 /*
     Generated Getters and Setters

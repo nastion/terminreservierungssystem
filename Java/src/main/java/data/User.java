@@ -1,8 +1,8 @@
 package data;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import controller.Controller;
+
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
@@ -14,10 +14,18 @@ public class User implements IUser {
     private String name;
     @NotNull
     private String password;
-    @OneToMany(mappedBy = "Notification")
+    @OneToMany
     private Set<Notification> notifications;
 
-    public User() {
+    @ManyToMany
+    private Set<Poll> events;
+
+    @Transient
+    private Controller controller;
+
+    public User(String name, String password) {
+        this.setName(name);
+        this.setPassword(password);
     }
 
     @Override
@@ -47,5 +55,21 @@ public class User implements IUser {
 
     public void setNotifications(Set<Notification> notifications) {
         this.notifications = notifications;
+    }
+
+    public Controller getController() {
+        return controller;
+    }
+
+    public void setController(Controller controller) {
+        this.controller = controller;
+    }
+
+    public Set<Poll> getEvents() {
+        return events;
+    }
+
+    public void setEvents(Set<Poll> events) {
+        this.events = events;
     }
 }

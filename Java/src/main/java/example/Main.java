@@ -1,5 +1,6 @@
 package example;
 
+import data.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -21,7 +22,12 @@ public class Main {
         //creating transaction object
         Transaction t=session.beginTransaction();
 
-        example.data.User u = new example.data.User("testuser", "test");
+        User u = new User("testuser", "test");
+        Poll p = new Poll();
+        p.addTeilnehmer(u);
+
+        session.persist(p);
+        session.persist(u);
 
         t.commit();//transaction is commited
 

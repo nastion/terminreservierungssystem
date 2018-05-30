@@ -1,7 +1,6 @@
 package controller;
 
 import data.User;
-import data.Teilnehmer;
 import data.Event;
 
 import java.util.Date;
@@ -13,7 +12,7 @@ public class EventController {
         this.controller = controller;
     }
 
-	public void createEvent(User organisator, Date[] dates, Teilnehmer[] teilnehmer) {
+	public void createEvent(User organisator, Date[] dates, User[] teilnehmer) {
 
 	}
 
@@ -23,7 +22,7 @@ public class EventController {
         controller.getSession().persist(evt);
 	}
 
-	public void removePeople(Event evt, Teilnehmer teilnehmer) {
+	public void removePeople(Event evt, User teilnehmer) {
 		evt.remTeilnehmer(teilnehmer);
 	}
 
