@@ -4,19 +4,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 public class Poll implements Event {
-
     @Id
     @GeneratedValue
     private int id;
 	private Date[] dates;
-	private Teilnehmer organisator;
 
-	private String descripition = null;
-	private String location = null;
-	private User user = null;
+	private String descripition;
+	private String location;
+	private Set<IUser> teilnehmer;
+
+	private Set<Comment> comments;
 	//private Controller controller;
 
 
@@ -28,17 +29,17 @@ public class Poll implements Event {
     Generated Getters and Setters
 */
 	public void addTeilnehmer(User u) {
-
+        this.teilnehmer.add(u);
 	}
 
 
-	public void remTeilnehmer(User t) {
-
+	public void remTeilnehmer(User u) {
+        this.teilnehmer.remove(u);
 	}
-
 
 	public void notifyTeilnehmer() {
-
+        for (IUser t: teilnehmer)
+            t.notify_User(this);
 	}
 
 	public int getId() {
@@ -57,14 +58,6 @@ public class Poll implements Event {
 		this.dates = dates;
 	}
 
-	public Teilnehmer getOrganisator() {
-		return organisator;
-	}
-
-	public void setOrganisator(Teilnehmer organisator) {
-		this.organisator = organisator;
-	}
-
 	public String getDescripition() {
 		return descripition;
 	}
@@ -79,13 +72,5 @@ public class Poll implements Event {
 
 	public void setLocation(String location) {
 		this.location = location;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
 	}
 }

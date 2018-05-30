@@ -63,7 +63,6 @@ public class ExampleController {
         cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file
 
         //creating session factory object
-        @SuppressWarnings("deprecation")
         SessionFactory factory=cfg.buildSessionFactory();
 
         //creating session object
@@ -71,7 +70,6 @@ public class ExampleController {
 
         Query q = session.createQuery("FROM User WHERE name LIKE '" + username+"'");
         User logged_in = null;
-        @SuppressWarnings("unchecked")
         List<User> user = q.list();
         for (User u: user) {
             if (u.getPassword().equals(password))
@@ -90,7 +88,6 @@ public class ExampleController {
         cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file
 
         //creating session factory object
-        @SuppressWarnings("deprecation")
         SessionFactory factory=cfg.buildSessionFactory();
 
         //creating session object
