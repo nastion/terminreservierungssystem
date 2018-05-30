@@ -8,7 +8,6 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import javax.sql.DataSource;
@@ -17,22 +16,14 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private DataSource dataSource;
+ //   @Autowired
+//    private DataSource dataSource;
 
-    @Value("${spring.queries.users-query}")
-    private String userQuery;
-
-    @Value("${spring.queries.roles-query}")
-    private String roleQuery;
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-        auth.jdbcAuthentication()
-                .usersByUsernameQuery(userQuery)
-                .authoritiesByUsernameQuery(roleQuery)
-                .dataSource(dataSource);
-    }
+//    @Override
+ //   protected void configure(AuthenticationManagerBuilder auth) throws Exception{
+  //      auth.jdbcAuthentication()
+   //             .dataSource(dataSource);
+    //}
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

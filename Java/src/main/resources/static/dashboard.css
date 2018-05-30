@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+    background-color:#575859;
+    -webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto,arial,sans-serif;
+}
+
+h1 {
+    color: #ffffff;
+    border-bottom-width:1px;
+    padding-bottom:10px;
+    text-align: center;
+}
+

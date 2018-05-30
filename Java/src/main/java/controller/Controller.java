@@ -5,7 +5,6 @@ import data.Event;
 import org.hibernate.Session;
 
 public class Controller {
-
 	private User currentUser;
 
 	private Session session;
@@ -19,5 +18,4 @@ public class Controller {
 	public User getCurrentUser() {
 		return null;
 	}
-
 }

@@ -1,8 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="f8ee5402-66e5-40a3-87a0-72d8c6ffb05d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Design/TRS_ClassDiagram.asta" beforeDir="false" afterPath="$PROJECT_DIR$/../Design/TRS_ClassDiagram.asta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Design/TRS_ClassDiagram.asta.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Java_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Java_main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Java_test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Java.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/test.h2.db" beforeDir="false" afterPath="$PROJECT_DIR$/database/test.h2.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/example/data/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/example/data/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/example/hello/ExampleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/example/hello/ExampleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/hibernate.cfg.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/static/signin.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/static/signin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/static/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/static/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/templates/example.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/templates/example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Organisator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Organisator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Poll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Poll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/Teilnehmer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Teilnehmer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/data/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/data/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/example/hello/ExampleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/example/hello/ExampleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/example.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/example.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Mockup-GUI.bmpr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MockupLogin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UseCaseLogin.png" beforeDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+=======
     <list default="true" id="f8ee5402-66e5-40a3-87a0-72d8c6ffb05d" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +58,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+<<<<<<< HEAD
+      <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+=======
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/example/hello/Application.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -34,10 +82,18 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="dashboard.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/dashboard.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
+=======
       <file leaf-file-name="SecurityConfiguration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/example/hello/SecurityConfiguration.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -46,25 +102,66 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
+      <file leaf-file-name="signin.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signin.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="signin.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/static/signin.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="register.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="22" column="19" selection-start-line="20" selection-start-column="12" selection-end-line="22" selection-end-column="19" />
+=======
       <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
               <caret line="27" selection-start-line="27" selection-end-line="27" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+<<<<<<< HEAD
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="C:\Users\alexh\.gradle\wrapper\dists\gradle-4.7-all\4cret0dgl5o3b21weaoncl7ys\gradle-4.7" />
+=======
   <component name="GradleLocalSettings">
     <option name="myGradleHomes">
       <map>
         <entry key="$PROJECT_DIR$" value="C:\Users\rstan\.gradle\wrapper\dists\gradle-4.7-all\4cret0dgl5o3b21weaoncl7ys\gradle-4.7" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
       </map>
     </option>
     <option name="myGradleVersions">
@@ -291,7 +388,11 @@
     </option>
     <option name="modificationStamps">
       <map>
+<<<<<<< HEAD
+        <entry key="$PROJECT_DIR$" value="6105922183595" />
+=======
         <entry key="$PROJECT_DIR$" value="6105739784169" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
         <entry key="$PROJECT_DIR$/.gradle" value="0" />
         <entry key="$PROJECT_DIR$/build.gradle" value="3159416733" />
         <entry key="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" value="1168256157" />
@@ -491,8 +592,13 @@
     </option>
     <option name="projectSyncType">
       <map>
+<<<<<<< HEAD
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="D:/Privat/Schule/4XHIT/SYT/BORM/EK/8.2/syt4_komplexe_komponentenbasierte_programmierung/westbahn" value="PREVIEW" />
+=======
         <entry key="D:/Privat/Schule/4XHIT/SYT/BORM/EK/8.2/syt4_komplexe_komponentenbasierte_programmierung/westbahn" value="PREVIEW" />
         <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
       </map>
     </option>
   </component>
@@ -525,8 +631,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -543,6 +652,7 @@
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+<<<<<<< HEAD
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
             <path>
@@ -551,12 +661,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
             </path>
             <path>
               <item name="Java" type="b2602c69:ProjectViewProjectNode" />
               <item name="Java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+<<<<<<< HEAD
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+=======
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
+            </path>
+            <path>
+              <item name="Java" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Java" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+<<<<<<< HEAD
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+=======
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -568,12 +696,18 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="example" type="462c0819:PsiDirectoryNode" />
               <item name="hello" type="462c0819:PsiDirectoryNode" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+<<<<<<< HEAD
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+=======
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -660,45 +794,97 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
+    <option name="totallyTimeSpent" value="335000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+=======
     <option name="totallyTimeSpent" value="266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
     <layout>
       <window_info anchor="right" id="Palette" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5005208" side_tool="true" visible="true" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49947917" visible="true" weight="0.32943678" />
+=======
       <window_info anchor="bottom" id="Build" weight="0.32965517" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+<<<<<<< HEAD
+=======
       <window_info anchor="bottom" id="Messages" weight="0.32965517" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="right" id="Capture Analysis" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Spring" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+=======
       <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32965517" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
       <window_info anchor="right" id="Bean Validation" />
-      <window_info id="Web" side_tool="true" />
+      <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="right" id="Gradle" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32965517" />
+      <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32965517" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Gradle" order="3" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+=======
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -708,6 +894,38 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/register.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="19" selection-start-line="20" selection-start-column="12" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/signin.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/signin.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/dashboard.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -715,13 +933,25 @@
         </state>
       </provider>
     </entry>
+=======
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" selection-start-line="11" selection-end-line="11" />
+<<<<<<< HEAD
+=======
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+>>>>>>> f0da34af7530f69a25ea661f7b30b8af5fa29584
         </state>
       </provider>
     </entry>
