@@ -507,3 +507,163 @@ alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
 05-30 14:56:19 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
 alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 14:58:10 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 14:58:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:01:05 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:01:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:05:26 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:05:26 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:06:37 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:06:38 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:07:51 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:07:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:08:24 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:08:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:09:16 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:09:16 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Feld "DTYPE" nicht gefunden
+Column "DTYPE" not found; SQL statement:
+insert into PUBLIC.User (id, name, password, DTYPE) values (null, ?, ?, 'User') [42122-148]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.table.Table.getColumn(Table.java:556)
+	at org.h2.command.Parser.parseColumnList(Parser.java:759)
+	at org.h2.command.Parser.parseInsert(Parser.java:930)
+	at org.h2.command.Parser.parsePrepared(Parser.java:371)
+	at org.h2.command.Parser.parse(Parser.java:275)
+	at org.h2.command.Parser.parse(Parser.java:247)
+	at org.h2.command.Parser.prepare(Parser.java:201)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1056)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:71)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:233)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:990)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$2.doPrepare(StatementPreparerImpl.java:124)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:186)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareStatement(StatementPreparerImpl.java:122)
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.prepare(IdentityGenerator.java:89)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:55)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3032)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3558)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:98)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:492)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:197)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:181)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:216)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:334)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:195)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:126)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:206)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:149)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:75)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:811)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:784)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:789)
+	at view.TRSApplication.main(TRSApplication.java:29)
+05-30 15:09:16 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: Feld "DTYPE" nicht gefunden
+Column "DTYPE" not found; SQL statement:
+insert into PUBLIC.User (id, name, password, DTYPE) values (null, ?, ?, 'User') [42122-148]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:327)
+	at org.h2.message.DbException.get(DbException.java:167)
+	at org.h2.message.DbException.get(DbException.java:144)
+	at org.h2.table.Table.getColumn(Table.java:556)
+	at org.h2.command.Parser.parseColumnList(Parser.java:759)
+	at org.h2.command.Parser.parseInsert(Parser.java:930)
+	at org.h2.command.Parser.parsePrepared(Parser.java:371)
+	at org.h2.command.Parser.parse(Parser.java:275)
+	at org.h2.command.Parser.parse(Parser.java:247)
+	at org.h2.command.Parser.prepare(Parser.java:201)
+	at org.h2.command.Parser.prepareCommand(Parser.java:214)
+	at org.h2.engine.Session.prepareLocal(Session.java:425)
+	at org.h2.engine.Session.prepareCommand(Session.java:374)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1056)
+	at org.h2.jdbc.JdbcPreparedStatement.<init>(JdbcPreparedStatement.java:71)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:233)
+	at org.h2.jdbc.JdbcConnection.prepareStatement(JdbcConnection.java:990)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$2.doPrepare(StatementPreparerImpl.java:124)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl$StatementPreparationTemplate.prepareStatement(StatementPreparerImpl.java:186)
+	at org.hibernate.engine.jdbc.internal.StatementPreparerImpl.prepareStatement(StatementPreparerImpl.java:122)
+	at org.hibernate.id.IdentityGenerator$GetGeneratedKeysDelegate.prepare(IdentityGenerator.java:89)
+	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:55)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3032)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3558)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:98)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:492)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:197)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:181)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:216)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:334)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:195)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:126)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:206)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:149)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:75)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:811)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:784)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:789)
+	at view.TRSApplication.main(TRSApplication.java:29)
+05-30 15:09:30 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:09:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:10:00 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:10:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:10:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
+NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]

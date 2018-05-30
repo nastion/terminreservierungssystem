@@ -1,5 +1,6 @@
 package view;
 
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import example.data.User;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -9,14 +10,16 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
 @Controller
 public class MappingController {
-    @GetMapping(value = {"/"})
-    public String example(@RequestParam(name="name", required=false, defaultValue="anonymous") String name,
-                          @RequestParam(name="password", required=false, defaultValue="") String password, Model model) {
+    @GetMapping(value = "/")
+    public ModelAndView example(@RequestParam(name="name", required=false, defaultValue="anonymous") String name,
+                                @RequestParam(name="password", required=false, defaultValue="") String password) {
+        ModelAndView modelAndView = new ModelAndView();
         //creating configuration object
         Configuration cfg=new Configuration();
         cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file
@@ -39,13 +42,15 @@ public class MappingController {
             }
         }
 
-        model.addAttribute("password_correct", pw_correct);
+        modelAndView.setViewName("dashboard");
 
-        model.addAttribute("name", name);
-        model.addAttribute("is_existent", exists);
+        modelAndView.addObject("password_correct", pw_correct);
+
+        modelAndView.addObject("name", name);
+        modelAndView.addObject("is_existent", exists);
 
 
         session.close();
-        return "dashboard";
+        return modelAndView;
     }
 }
