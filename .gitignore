@@ -1,0 +1,7 @@
+Java/.gradle/
+Java/build/
+Java/.idea/
+Java/out/
+
+
+test.lock.db
