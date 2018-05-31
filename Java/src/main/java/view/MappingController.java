@@ -25,7 +25,6 @@ public class MappingController {
         cfg.configure("hibernate.cfg.xml");//populates the data of the configuration file
 
         //creating session factory object
-        @SuppressWarnings("deprecation")
         SessionFactory factory=cfg.buildSessionFactory();
 
         //creating session object
@@ -48,7 +47,6 @@ public class MappingController {
 
         modelAndView.addObject("name", name);
         modelAndView.addObject("is_existent", exists);
-
 
         session.close();
         return modelAndView;
