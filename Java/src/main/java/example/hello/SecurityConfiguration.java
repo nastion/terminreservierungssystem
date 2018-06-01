@@ -1,5 +1,6 @@
-package example.hello;
 /*
+package example.hello;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
@@ -33,8 +34,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/index").permitAll()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/registration").permitAll()
-                .antMatchers("/dashboard").authenticated()
-                .antMatchers("/settings").authenticated()
+                .antMatchers("/dashboard").permitAll()
+                .antMatchers("/example").permitAll()
                 .and().csrf().disable().formLogin()
                 .loginPage("/login").failureUrl("/login?error=true")
                 .defaultSuccessUrl("/dashboard")

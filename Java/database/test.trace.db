@@ -667,3 +667,60 @@ alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
 org.h2.jdbc.JdbcSQLException: NULL nicht zulässig für Feld "DTYPE"
 NULL not allowed for column "DTYPE"; SQL statement:
 alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:36:37 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:36:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:39:41 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:39:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:42:11 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:42:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:43:42 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:43:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:44:56 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:44:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:49:32 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:49:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:53:00 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:53:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:53:11 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:53:43 jdbc[5]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:55:30 jdbc[2]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:55:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]
+05-30 15:56:26 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLException: NULL not allowed for column "DTYPE"; SQL statement:
+alter table PUBLIC.User add column DTYPE varchar(31) not null [90006-148]

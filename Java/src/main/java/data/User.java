@@ -24,6 +24,10 @@ public class User implements IUser {
     @Transient
     private Controller controller;
 
+    public User() {
+
+    }
+
     public User(String name, String password) {
         this.setName(name);
         this.setPassword(password);

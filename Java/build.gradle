@@ -28,10 +28,7 @@ targetCompatibility = 1.8
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    compile("org.springframework.boot:spring-boot-starter-jpa")
-    compile("org.springframework.boot:spring-boot-starter-parent")
     compile("org.springframework.boot:spring-boot-devtools")
     compile("org.apache.tomcat.embed:tomcat-embed-jasper")
     compile("org.hibernate:hibernate-core:4.3.11.Final")
