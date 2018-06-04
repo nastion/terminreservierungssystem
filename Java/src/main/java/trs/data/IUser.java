@@ -1,4 +1,4 @@
-package data;
+package trs.data;
 
 import javax.persistence.Embeddable;
 

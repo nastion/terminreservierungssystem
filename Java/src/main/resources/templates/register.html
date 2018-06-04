@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Registrierung</title>
@@ -13,16 +13,17 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
-            <div class="form-login">
+            <form class="form-login" th:object="${user}" method="post">
                 <h3>Registrierung</h3>
-                <input type="text" id="Username" class="form-control input-sm chat-input" placeholder="Username" /><br>
-                <input type="text" id="Password" class="form-control input-sm chat-input" placeholder="Passwort" /><br>
+                <input type="text" id="Username" class="form-control input-sm chat-input" placeholder="Username"
+                       th:field="*{name}" /><br>
+                <input type="text" id="Password" class="form-control input-sm chat-input" placeholder="Passwort"
+                       th:field="*{password}" /><br>
                 <div class="wrapper">
-            <span class="group-btn">
-                <a href="#" class="btn btn-primary btn-md">Registrierung <i class="fa fa-sign-in"></i></a>
-            </span>
+                    <input type="submit" value="Register" class="btn btn-primary btn-md" />
                 </div>
-            </div>
+                <p th:if="${success}" th:text="${success}"></p>
+            </form>
 
 
         </div>

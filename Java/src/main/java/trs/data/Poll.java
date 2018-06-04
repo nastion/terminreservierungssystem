@@ -1,6 +1,6 @@
-package data;
+package trs.data;
 
-import controller.Controller;
+import trs.controller.Controller;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -15,6 +15,7 @@ public class Poll implements Event {
 
 	private Date[] dates;
 
+	private String title;
 	private String descripition;
 	private String location;
 
@@ -24,9 +25,12 @@ public class Poll implements Event {
 	@Transient
 	private Controller controller;
 
-	@OneToMany
+	@ElementCollection
 	private Set<Comment> comments;
 	//private Controller controller;
+
+    @ManyToOne
+    private User organisator;
 
     private Date date;
 
@@ -84,4 +88,28 @@ public class Poll implements Event {
 	public void setLocation(String location) {
 		this.location = location;
 	}
+
+    public User getOrganisator() {
+        return organisator;
+    }
+
+    public void setOrganisator(User organisator) {
+        this.organisator = organisator;
+    }
+
+    public Set<Comment> getComments() {
+        return comments;
+    }
+
+    public void setComments(Set<Comment> comments) {
+        this.comments = comments;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
 }

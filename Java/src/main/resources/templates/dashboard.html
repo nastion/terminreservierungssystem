@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Dashboard</title>
@@ -12,8 +12,9 @@
 <body>
 <div class="container">
     <div class="row">
-        <h1 align="center">Dashboard</h1>
+        <h1 align="center" th:text="'Dashboard - ' + ${name}"></h1>
     </div>
+    <p th:text="'User ' + ${name} + ' is existent? ' + ${is_existent} + ' with an correct password? ' + ${password_correct}"></p>
     <div class="row">
         <div class="col-md-offset-1 col-md-3">
             <div class="panel panel-default">

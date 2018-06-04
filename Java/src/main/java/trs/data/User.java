@@ -1,6 +1,6 @@
-package data;
+package trs.data;
 
-import controller.Controller;
+import trs.controller.Controller;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -18,11 +18,14 @@ public class User implements IUser {
     @OneToMany
     private Set<Notification> notifications;
 
-    @ManyToMany
-    private Set<Poll> events;
-
     @Transient
     private Controller controller;
+
+    @OneToMany(mappedBy = "organisator")
+    private Set<Poll> org_polls;
+
+    @ManyToMany
+    private Set<Poll> events;
 
     public User() {
 
@@ -35,7 +38,7 @@ public class User implements IUser {
 
     @Override
     public void notify_User(Event event) {
-
+        System.out.println("Notifying user for " + ((Poll) event).getDescripition());
     }
     public String getName() {
         return name;
@@ -68,13 +71,5 @@ public class User implements IUser {
 
     public void setController(Controller controller) {
         this.controller = controller;
-    }
-
-    public Set<Poll> getEvents() {
-        return events;
-    }
-
-    public void setEvents(Set<Poll> events) {
-        this.events = events;
     }
 }

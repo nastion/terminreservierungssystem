@@ -1,6 +1,6 @@
-package controller;
+package trs.controller;
 
-import data.User;
+import trs.data.User;
 
 public class UserController {
 	private Controller controller;

@@ -1,7 +1,6 @@
-package controller;
+package trs.controller;
 
-import data.User;
-import data.Event;
+import trs.data.User;
 import org.hibernate.Session;
 
 public class Controller {
