@@ -1,12 +1,17 @@
 package trs.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import trs.data.User;
-import org.hibernate.Session;
+import trs.repositories.PollRepository;
+import trs.repositories.UserRepository;
 
 public class Controller {
-    private User currentUser;
+    @Autowired
+    private UserRepository userRepo;
+    @Autowired
+    private PollRepository pollRepo;
 
-    private Session session;
+    private User currentUser;
 
 	private EventController eventController;
 
@@ -16,8 +21,9 @@ public class Controller {
 	    return this.currentUser;
     }
 
-    public void setCurrentUser(User currentUser) {
+    public boolean setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
+        return true;
     }
 
     public EventController getEventController() {
@@ -36,11 +42,20 @@ public class Controller {
         this.userController = userController;
     }
 
-    public Session getSession() {
-        return session;
+    public UserRepository getUserRepo() {
+        return userRepo;
     }
 
-    public void setSession(Session session) {
-        this.session = session;
+    public void setUserRepo(UserRepository userRepo) {
+        this.userRepo = userRepo;
     }
+
+    public PollRepository getPollRepo() {
+        return pollRepo;
+    }
+
+    public void setPollRepo(PollRepository pollRepo) {
+        this.pollRepo = pollRepo;
+    }
+
 }

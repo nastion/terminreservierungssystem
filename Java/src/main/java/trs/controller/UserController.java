@@ -10,15 +10,15 @@ public class UserController {
 
 	public void createUser(String username, String password) {
 		User user = new User(username, password);
-		controller.getSession().persist(user);
+		this.controller.getUserRepo().save(user);
 	}
 
 	public User searchUser(String username) {
-		return null;
+		return this.controller.getUserRepo().findUserByName(username);
 	}
 
 	public boolean logout() {
-		return false;
+		return this.controller.setCurrentUser(null);
 	}
 
 }
