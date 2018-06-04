@@ -1,7 +1,11 @@
 /.gradle/
+/.project
 /build/
 /.idea/
 /out/
-
+/lib/
+/.settings/
+/gradle/
 
 test.lock.db
+Java.iml
