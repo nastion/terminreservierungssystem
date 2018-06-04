@@ -5,7 +5,6 @@
 /out/
 /lib/
 /.settings/
-/gradle/
 
 test.lock.db
 Java.iml
