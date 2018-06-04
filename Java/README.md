@@ -30,8 +30,9 @@ To run gradle from console you need gradle installed and added to your PATH vari
 Therefore, I recommend [this tutorial](https://gradle.org/install/?_ga=2.178919654.35539380.1525637070-460619871.1525637070).<br />
 When gradle is installed and configured, you need to navigate to the folder
 you cloned the git repository to.
-Go into the `Java`-Folder and execute the following command:<br />
+Go into the `Java`-Folder and execute one of the following commands:<br />
 `gradlew build && java -jar build/libs/trs-0.1.0.jar`<br />
+`gradlew bootRun`<br />
 This should successfully build and run the Spring Boot Application.
 
 4. Run in IntelliJ<br />
