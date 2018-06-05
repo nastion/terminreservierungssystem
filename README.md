@@ -2,6 +2,9 @@
 ### 4BHIT - Gruppe 4
 ### Fuchs, Hasenberger, Freudenthaler, Petrovic, Demir
 ----
+## Dokumentation und Projekt
+Die Dokumentation und das Projekt selbst können [hier](Java/) gefunden werden!
+
 ## Aufgabenstellung
 Es soll ein Terminvereinbarungssystem erstellt werden, bei dem mehrere Benutzer untereinander zu einem Event einen Termin finden können. Bei diesem Terminvereinbarungssystem soll es Benutzer, Organisator und Teilnehmer geben. Weiters soll es Notifications geben. 
 
