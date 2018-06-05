@@ -2,6 +2,7 @@ package trs.controller;
 
 import example.data.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import trs.data.Comment;
 import trs.data.Poll;
 import trs.data.User;
 import trs.data.Event;
@@ -39,17 +40,30 @@ public class EventController {
 
 	public void addDescription(Poll evt, String description) {
 		evt.setDescripition(description);
-		this.controller.getPollRepo().save((Poll) evt);
+		this.controller.getPollRepo().save(evt);
 	}
 
 	public void addLocation(Poll evt, String location) {
 		evt.setLocation(location);
-		this.controller.getPollRepo().save((Poll) evt);
+		this.controller.getPollRepo().save(evt);
 	}
 
 	public void setDate(Poll evt, Date date) {
 		evt.setDate(date);
-		this.controller.getPollRepo().save((Poll) evt);
+		this.controller.getPollRepo().save(evt);
 	}
+
+	public void comment(Poll evt, User poster, String text) {
+        Comment comment = new Comment();
+        comment.setPoster(poster);
+        comment.setText(text);
+        evt.addComment(comment);
+        this.controller.getPollRepo().save(evt);
+    }
+
+    public void remove_comment(Poll evt, Comment comment) {
+        evt.removeComment(comment);
+        this.controller.getPollRepo().save(evt);
+    }
 
 }

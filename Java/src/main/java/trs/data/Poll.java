@@ -27,7 +27,6 @@ public class Poll implements Event {
 
 	@ElementCollection
 	private Set<Comment> comments;
-	//private Controller controller;
 
     @ManyToOne
     private User organisator;
@@ -97,6 +96,10 @@ public class Poll implements Event {
         this.organisator = organisator;
     }
 
+    public void addComment(Comment comment) {
+	    this.comments.add(comment);
+    }
+
     public Set<Comment> getComments() {
         return comments;
     }
@@ -111,5 +114,9 @@ public class Poll implements Event {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public void removeComment(Comment comment) {
+	    this.comments.remove(comment);
     }
 }
