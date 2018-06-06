@@ -14,16 +14,14 @@
     <div class="row">
         <h1 align="center" th:text="'Dashboard - ' + ${name}"></h1>
     </div>
-    <p th:text="'User ' + ${name} + ' is existent? ' + ${is_existent} + ' with an correct password? ' + ${password_correct}"></p>
+    <p th:text="'User ' + ${name}"></p>
     <div class="row">
         <div class="col-md-offset-1 col-md-3">
             <div class="panel panel-default">
                 <div class="panel-heading">Noch abzustimmen</div>
                 <div class="panel-body">
-                    <ul>
-                        <li>Event 01</li>
-                        <li>Event 02</li>
-                        <li>Event 03</li>
+                    <ul th:each="poll : ${polls}">
+                        <li th:text="${poll.title}"></li>
                     </ul>
                 </div>
             </div>
