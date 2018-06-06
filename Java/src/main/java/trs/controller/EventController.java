@@ -20,6 +20,11 @@ public class EventController {
 
 	public void createEvent(User organisator, Date[] dates, User[] teilnehmer) {
 		Event evt = new Poll();
+		((Poll) evt).setOrganisator(organisator);
+		((Poll) evt).setDates(dates);
+		for (int i = 0; i<teilnehmer.length; i++)
+			((Poll) evt).addTeilnehmer(teilnehmer[i]);
+		this.controller.getPollRepo().save((Poll) evt);
 
 	}
 
