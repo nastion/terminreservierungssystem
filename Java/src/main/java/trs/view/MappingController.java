@@ -1,6 +1,7 @@
 package trs.view;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import trs.data.Poll;
 import trs.data.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import trs.repositories.PollRepository;
 import trs.repositories.UserRepository;
 
 import javax.validation.Valid;
+import java.util.Set;
 
 @Controller
 public class MappingController {
@@ -62,9 +64,32 @@ public class MappingController {
             userRepo.save(user);
             modelAndView.addObject("message", "User successfully registered!");
         } else {
-            modelAndView.addObject("success", "User already exists!");
+            modelAndView.addObject("message", "User already exists!");
         }
         modelAndView.setViewName("register");
         return modelAndView;
     }
+
+
+
+    @GetMapping("/dashboard")
+    public ModelAndView dashboard() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("dashboard");
+        Poll poll = new Poll();
+        poll.setDescripition("Tolles Event");
+        poll.setTitle("Event124");
+        User user = userRepo.findUserByName("user");
+        poll.setOrganisator(user);
+
+        pollRepo.save(poll);
+        //pollRepo.deleteAll();
+        Set<Poll> polls = pollRepo.findAllByOrganisator(user);
+
+        modelAndView.addObject("name", user.getName());
+        modelAndView.addObject("polls", polls);
+        return modelAndView;
+    }
+    
 }
+
