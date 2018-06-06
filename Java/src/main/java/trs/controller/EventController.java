@@ -1,12 +1,9 @@
 package trs.controller;
 
-import example.data.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import trs.data.Comment;
+import trs.data.Event;
 import trs.data.Poll;
 import trs.data.User;
-import trs.data.Event;
-import trs.repositories.PollRepository;
 
 import java.util.Date;
 
@@ -19,8 +16,11 @@ public class EventController {
     }
 
 	public void createEvent(User organisator, Date[] dates, User[] teilnehmer) {
-		Event evt = new Poll();
-
+		Poll evt = new Poll();
+		evt.setOrganisator(organisator);
+		evt.setDates(dates);
+        for (User aTeilnehmer : teilnehmer) evt.addTeilnehmer(aTeilnehmer);
+		this.controller.getPollRepo().save(evt);
 	}
 
 	public void invitePeople(Event evt, User[] teilnehmer) {

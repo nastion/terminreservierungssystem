@@ -5,6 +5,12 @@ import trs.data.User;
 public class UserController {
 	private Controller controller;
 	public User login(String username, String password) {
+		User logUser = this.controller.getUserRepo().findUserByName(username);
+		if(logUser != null && logUser.getPassword().equals(password)) {
+			controller.setCurrentUser(logUser);
+			return logUser;
+		}
+		controller.setCurrentUser(null);
 		return null;
 	}
 
