@@ -6,9 +6,11 @@ public class UserController {
 	private Controller controller;
 	public User login(String username, String password) {
 		User logUser = this.controller.getUserRepo().findUserByName(username);
-		if(logUser.getPassword() == password)
+		if(logUser.getPassword() == password) {
+			controller.setCurrentUser(logUser);
 			return logUser;
-
+		}
+		controller.setCurrentUser(null);
 		return null;
 	}
 
