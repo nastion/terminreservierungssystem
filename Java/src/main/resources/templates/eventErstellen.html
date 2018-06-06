@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -26,17 +26,18 @@
 <body>
 <div class="container">
     <div class="row">
+        <form class="form" th:object="${poll}" method="post">
         <div class="col-sm">
             </br></br></br>
             <h4>Name</h4>
-            <input type="text" id="ErstellerName" class="textInputStyle"
+            <input type="text" th:field="*{Title}" class="textInputStyle"
                    placeholder="Ersteller Name"/><br>
             </br>
             <h4>Ort</h4>
-            <input type="text" id="Ort" class="textInputStyle" placeholder="Ort"/><br>
+            <input type="text" th:field="*{Location}" class="textInputStyle" placeholder="Ort"/><br>
             </br>
             <h4>Beschreibung</h4>
-            <input type="text" id="Beschreibung" class="textInputStyle"
+            <input type="text" th:field="*{Description}" class="textInputStyle"
                    placeholder="Beschreibung"/><br>
         </div>
         <div class="col-sm">
@@ -52,8 +53,9 @@
         <div class="col-sm">
             </br></br></br>
             <h4>Datum</h4>
-            <input type="date" class="textInputStyle">
+            <input type="date" th:field="*{Date}" class="textInputStyle">
         </div>
+        </form>
     </div>
 </div>
 

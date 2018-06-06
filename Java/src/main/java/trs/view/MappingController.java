@@ -90,6 +90,24 @@ public class MappingController {
         modelAndView.addObject("polls", polls);
         return modelAndView;
     }
-    
+
+    @GetMapping("/eventErstellen")
+    public ModelAndView eventErstellen() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("eventErstellen");
+        Poll poll = new Poll();
+        poll.getTitle();
+        poll.getDescripition();
+        poll.getDate();
+        poll.getLocation();
+
+        User user = new User();
+        pollRepo.save(poll);
+        Set<Poll> polls = pollRepo.findAllByOrganisator(user);
+
+        modelAndView.addObject("name", user.getName());
+        modelAndView.addObject("polls", polls);
+        return modelAndView;
+    }
 }
 
