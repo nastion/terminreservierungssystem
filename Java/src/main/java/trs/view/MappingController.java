@@ -109,5 +109,40 @@ public class MappingController {
         modelAndView.addObject("polls", polls);
         return modelAndView;
     }
+
+    @GetMapping("/signin")
+    public ModelAndView signin() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("signin");
+
+        User user = new User();
+
+        modelAndView.addObject("name", user.getName());
+        return modelAndView;
+    }
+
+    @GetMapping("/eventAbstimmen")
+    public ModelAndView eventAbstimmen() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("eventAbstimmen");
+
+        User user = new User();
+
+        modelAndView.addObject("name", user.getName());
+        return modelAndView;
+    }
+
+    @GetMapping("/eventResult")
+    public ModelAndView eventResult() {
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("eventResult");
+
+        User user = new User();
+
+        modelAndView.addObject("name", user.getName());
+        return modelAndView;
+    }
+
+
 }
 
