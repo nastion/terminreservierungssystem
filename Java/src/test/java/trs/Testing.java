@@ -62,6 +62,13 @@ public class Testing {
         Assert.assertNull(controller.getCurrentUser());
     }
 
+    @Test
+    public void logoutUser(){
+        User testUser = new User("TestUser", "TestPw");
+        controller.getUserController().createUser(testUser);
+        controller.getUserController().login(testUser.getName(),testUser.getPassword());
+        Assert.assertNull(controller.getCurrentUser());
+    }
 
 
 
