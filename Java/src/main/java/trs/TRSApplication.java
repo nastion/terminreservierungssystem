@@ -1,6 +1,5 @@
 package trs;
 
-import trs.data.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +8,7 @@ public class TRSApplication {
     public static void main(String[] args) {
         SpringApplication.run(TRSApplication.class, args);
     }
+
+
 
 }

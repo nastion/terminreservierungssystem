@@ -4,6 +4,11 @@ import trs.data.User;
 
 public class UserController {
 	private Controller controller;
+
+	public UserController(Controller controller) {
+	    this.controller = controller;
+    }
+
 	public User login(String username, String password) {
 		User logUser = this.controller.getUserRepo().findUserByName(username);
 		if(logUser != null && logUser.getPassword().equals(password)) {
@@ -14,10 +19,18 @@ public class UserController {
 		return null;
 	}
 
-	public void createUser(String username, String password) {
+	public boolean createUser(String username, String password) {
 		User user = new User(username, password);
-		this.controller.getUserRepo().save(user);
+		return this.createUser(user);
 	}
+
+	public boolean createUser(User user) {
+	    if (this.controller.getUserRepo().findUserByName(user.getName()) == null) {
+	        this.controller.getUserRepo().save(user);
+            return true;
+	    }
+	    return false;
+    }
 
 	public User searchUser(String username) {
 		return this.controller.getUserRepo().findUserByName(username);

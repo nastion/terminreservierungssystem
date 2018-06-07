@@ -1,10 +1,10 @@
-/.project
-/bin/
-/build/
-/.idea/
-/out/
-/lib/
-/.settings/
+.project
+bin/
+build/
+.idea/
+out/
+lib/
+.settings/
 
 test.lock.db
 Java.iml
