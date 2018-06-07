@@ -1,10 +1,12 @@
 package trs.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import trs.data.User;
 import trs.repositories.PollRepository;
 import trs.repositories.UserRepository;
 
+@Component
 public class Controller {
     @Autowired
     private UserRepository userRepo;
@@ -16,6 +18,11 @@ public class Controller {
 	private EventController eventController;
 
 	private UserController userController;
+
+	public Controller() {
+	    this.setUserController(new UserController(this));
+        this.setEventController(new EventController(this));
+    }
 
 	public User getCurrentUser() {
 	    return this.currentUser;

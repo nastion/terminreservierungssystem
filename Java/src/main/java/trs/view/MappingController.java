@@ -22,6 +22,9 @@ public class MappingController {
     @Autowired
     private PollRepository pollRepo;
 
+    @Autowired
+    private trs.controller.Controller controller;
+
     @GetMapping(value = "/")
     public ModelAndView example(@RequestParam(name="name", required=false, defaultValue="anonymous") String name,
                                 @RequestParam(name="password", required=false, defaultValue="") String password) {
@@ -56,16 +59,17 @@ public class MappingController {
     @PostMapping("/register")
     public ModelAndView confirm_register(@Valid User user) {
         ModelAndView modelAndView = new ModelAndView();
-        System.out.println("Added user " + user.getName() + " with " + user.getPassword());
-        User u = new User();
-        modelAndView.addObject("user", u);
 
-        if (userRepo.findUserByName(user.getName()) == null) {
-            userRepo.save(user);
+        System.out.println(controller == null);
+        if (controller.getUserController().createUser(user)) {
+            System.out.println("Added user " + user.getName() + " with " + user.getPassword());
             modelAndView.addObject("message", "User successfully registered!");
         } else {
             modelAndView.addObject("message", "User already exists!");
         }
+
+        User u = new User();
+        modelAndView.addObject("user", u);
         modelAndView.setViewName("register");
         return modelAndView;
     }
