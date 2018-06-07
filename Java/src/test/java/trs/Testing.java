@@ -1,5 +1,6 @@
 package trs;
 
+import trs.data.Poll;
 import trs.data.User;
 import org.junit.Assert;
 import org.junit.Before;
@@ -10,6 +11,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import trs.controller.Controller;
 import trs.controller.UserController;
+
+import java.util.Date;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -36,31 +39,33 @@ public class Testing {
 
     @Test
     public void getUserNameCurrentUser() {
-        User user = new User("TestFindUser", "TestPw");
+        User user = new User("getUserName", "TestPw");
         controller.getUserController().createUser(user);
-        Assert.assertEquals("TestFindUser", controller.getCurrentUser().getName());
+        controller.getUserController().login(user.getName(), user.getPassword());
+        Assert.assertEquals("getUserName", controller.getCurrentUser().getName());
     }
 
     @Test
     public void getPasswordCurrentUser() {
-        User user = new User("TestFindUser", "TestPw");
+        User user = new User("getUserPassword", "TestPw");
         controller.getUserController().createUser(user);
+        controller.getUserController().login(user.getName(), user.getPassword());
         Assert.assertEquals("TestPw", controller.getCurrentUser().getPassword());
     }
 
 
     @Test
     public void createUserAndSearchAssertSameName(){
-        User user = new User("TestFindUser", "TestPw");
+        User user = new User("TestFindUserName", "TestPw");
         controller.getUserController().createUser(user);
-        Assert.assertEquals("TestFindUser", controller.getUserController().searchUser("TestFindUser").getName());
+        Assert.assertEquals("TestFindUserName", controller.getUserController().searchUser("TestFindUserName").getName());
     }
 
     @Test
     public void createUserAndSearchAssertSamePassword(){
-        User user = new User("TestFindUser", "TestPw");
+        User user = new User("TestFindUserPassword", "TestPw");
         controller.getUserController().createUser(user);
-        Assert.assertEquals("TestPw", controller.getUserController().searchUser("TestFindUser").getPassword());
+        Assert.assertEquals("TestPw", controller.getUserController().searchUser("TestFindUserPassword").getPassword());
     }
 
     @Test
@@ -68,7 +73,7 @@ public class Testing {
         User testUser = new User("TestUser", "TestPw");
         controller.getUserController().createUser(testUser);
         controller.getUserController().login(testUser.getName(),testUser.getPassword());
-        Assert.assertEquals(testUser.getName(), controller.getCurrentUser().getName());
+        Assert.assertEquals(testUser, controller.getCurrentUser());
     }
 
     @Test
@@ -79,12 +84,11 @@ public class Testing {
 
     @Test
     public void logoutUser(){
-        User testUser = new User("TestUser", "TestPw");
+        User testUser = new User("LogoutUser", "TestPw");
         controller.getUserController().createUser(testUser);
         controller.getUserController().login(testUser.getName(),testUser.getPassword());
         Assert.assertNull(controller.getCurrentUser());
     }
 
-
-
+    
 }
