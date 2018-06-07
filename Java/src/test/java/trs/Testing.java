@@ -35,6 +35,21 @@ public class Testing {
     }
 
     @Test
+    public void getUserNameCurrentUser() {
+        User user = new User("TestFindUser", "TestPw");
+        controller.getUserController().createUser(user);
+        Assert.assertEquals("TestFindUser", controller.getCurrentUser().getName());
+    }
+
+    @Test
+    public void getPasswordCurrentUser() {
+        User user = new User("TestFindUser", "TestPw");
+        controller.getUserController().createUser(user);
+        Assert.assertEquals("TestPw", controller.getCurrentUser().getPassword());
+    }
+
+
+    @Test
     public void createUserAndSearchAssertSameName(){
         User user = new User("TestFindUser", "TestPw");
         controller.getUserController().createUser(user);
