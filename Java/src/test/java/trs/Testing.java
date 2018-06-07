@@ -1,6 +1,6 @@
 package trs;
 
-import example.data.User;
+import trs.data.User;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,50 +17,49 @@ public class Testing {
     @Autowired
     Controller controller;
 
-
-    @Test
-    public void contextLoads() throws Exception {
-        
+    @Before
+    public void init() {
+        this.controller.getPollRepo().deleteAll();
+        this.controller.getUserRepo().deleteAll();
     }
 
     @Test
     public void createUser(){
-        Controller c = new Controller();
-        UserController uc = new UserController(c);
-        Assert.assertEquals(true, uc.createUser("TestUser","TestPw"));
+        Assert.assertTrue(controller.getUserController().createUser("TestUser", "TestPw"));
     }
 
     @Test
     public void createSameUserTwice(){
-        Controller c = new Controller();
-        UserController uc = new UserController(c);
-        uc.createUser("TestUserTwice","TestPw");
-        Assert.assertEquals(false, uc.createUser("TestUserTwice","TestPw"));
+        controller.getUserController().createUser("TestUserTwice","TestPw");
+        Assert.assertFalse(controller.getUserController().createUser("TestUserTwice", "TestPw"));
     }
 
     @Test
-    public void createUserAndSearch(){
-        Controller c = new Controller();
-        UserController uc = new UserController(c);
-        uc.createUser("TestFindUser","TestPw");
-        Assert.assertEquals("TestFindUser", uc.searchUser("TestFindUser"));
+    public void createUserAndSearchAssertSameName(){
+        User user = new User("TestFindUser", "TestPw");
+        controller.getUserController().createUser(user);
+        Assert.assertEquals("TestFindUser", controller.getUserController().searchUser("TestFindUser").getName());
+    }
+
+    @Test
+    public void createUserAndSearchAssertSamePassword(){
+        User user = new User("TestFindUser", "TestPw");
+        controller.getUserController().createUser(user);
+        Assert.assertEquals("TestPw", controller.getUserController().searchUser("TestFindUser").getPassword());
     }
 
     @Test
     public void loginUser(){
-        Controller c = new Controller();
-        UserController uc = new UserController(c);
-        uc.login("TestUser","TestPw");
-        User testUser = new User("TestUser","TestPw");
-        Assert.assertEquals(testUser, c.getCurrentUser());
+        User testUser = new User("TestUser", "TestPw");
+        controller.getUserController().createUser(testUser);
+        controller.getUserController().login(testUser.getName(),testUser.getPassword());
+        Assert.assertEquals(testUser.getName(), controller.getCurrentUser().getName());
     }
 
     @Test
     public void loginNotExistingUser(){
-        Controller c = new Controller();
-        UserController uc = new UserController(c);
-        uc.login("Abc","TestPw");
-        Assert.assertNull(c.getCurrentUser());
+        controller.getUserController().login("Abc","TestPw");
+        Assert.assertNull(controller.getCurrentUser());
     }
 
 
