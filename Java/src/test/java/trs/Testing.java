@@ -2,6 +2,7 @@ package trs;
 
 import example.data.User;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ public class Testing {
     @Autowired
     Controller controller;
 
+
     @Test
     public void contextLoads() throws Exception {
         
@@ -25,7 +27,6 @@ public class Testing {
     public void createUser(){
         Controller c = new Controller();
         UserController uc = new UserController(c);
-        uc.createUser("TestUser","TestPw");
         Assert.assertEquals(true, uc.createUser("TestUser","TestPw"));
     }
 
@@ -33,18 +34,35 @@ public class Testing {
     public void createSameUserTwice(){
         Controller c = new Controller();
         UserController uc = new UserController(c);
-        uc.createUser("TestUser","TestPw");
-        uc.createUser("TestUser","TestPw");
-        Assert.assertEquals(false, uc.createUser("TestUser","TestPw"));
+        uc.createUser("TestUserTwice","TestPw");
+        Assert.assertEquals(false, uc.createUser("TestUserTwice","TestPw"));
     }
 
     @Test
     public void createUserAndSearch(){
         Controller c = new Controller();
         UserController uc = new UserController(c);
-        uc.createUser("TestUser","TestPw");
-        Assert.assertEquals("TestUser", uc.searchUser("TestUser"));
+        uc.createUser("TestFindUser","TestPw");
+        Assert.assertEquals("TestFindUser", uc.searchUser("TestFindUser"));
     }
+
+    @Test
+    public void loginUser(){
+        Controller c = new Controller();
+        UserController uc = new UserController(c);
+        uc.login("TestUser","TestPw");
+        User testUser = new User("TestUser","TestPw");
+        Assert.assertEquals(testUser, c.getCurrentUser());
+    }
+
+    @Test
+    public void loginNotExistingUser(){
+        Controller c = new Controller();
+        UserController uc = new UserController(c);
+        uc.login("Abc","TestPw");
+        Assert.assertNull(c.getCurrentUser());
+    }
+
 
 
 
