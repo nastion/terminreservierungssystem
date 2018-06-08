@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Anmeldung</title>
@@ -13,17 +13,19 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-5 col-md-3">
-            <div class="form-login">
+            <form class="form-login" th:action="@{/signin}" th:object="${user}" method="post">
                 <h3>Anmeldung</h3>
-                <input type="text" id="Username" class="form-control input-sm chat-input" placeholder="Username" /><br>
-                <input type="text" id="Password" class="form-control input-sm chat-input" placeholder="Passwort" /><br>
+                <input type="text" th:field="*{name}" class="form-control input-sm chat-input" placeholder="Username" /><br>
+                <input type="password" th:field="*{password}" class="form-control input-sm chat-input" placeholder="Passwort" /><br>
                 <div class="wrapper">
-            <span class="group-btn">
-                <a href="#" class="btn btn-primary btn-md">Anmelden <i class="fa fa-sign-in"></i></a>
-            </span>
-                    <a href="register.html">Registrierung</a>
+                    <span class="group-btn">
+                        <input type="submit" class="btn btn-primary btn-md" th:value="Anmelden"/>
+                    </span>
+                    <p th:if="${message}" th:text="${message}" />
+                    <br />
+                    <a th:href="@{/register}">Registrierung</a>
                 </div>
-            </div>
+            </form>
 
 
         </div>

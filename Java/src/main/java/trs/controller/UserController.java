@@ -9,14 +9,14 @@ public class UserController {
 	    this.controller = controller;
     }
 
-	public User login(String username, String password) {
+	public boolean login(String username, String password) {
 		User logUser = this.controller.getUserRepo().findUserByName(username);
 		if(logUser != null && logUser.getPassword().equals(password)) {
 			controller.setCurrentUser(logUser);
-			return logUser;
+			return true;
 		}
 		controller.setCurrentUser(null);
-		return null;
+		return false;
 	}
 
 	public boolean createUser(String username, String password) {

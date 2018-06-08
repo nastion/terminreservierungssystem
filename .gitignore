@@ -1,9 +1,7 @@
-Java/.gradle/
-Java/build/
-Java/.idea/
-Java/out/
-
+Cypress/
 
 test.lock.db
-Java/.idea/workspace.xml
+
 cypress.zip
+.gradle/
+workspace.xml
