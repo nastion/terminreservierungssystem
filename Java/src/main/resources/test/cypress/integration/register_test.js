@@ -1,6 +1,6 @@
 describe('Register Page', function() {
     it('Registerpage aufrufen', function() {
-      cy.visit('http://localhost/')             //URL muss noch geändert werden
+      cy.visit('http://localhost:8080/')             //URL muss noch geändert werden
     })
 
     it('Registerpage Ueberschrift pruefen', function() {
