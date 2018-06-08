@@ -30,18 +30,17 @@
         <div class="col-sm">
             </br></br></br>
             <h4>Name</h4>
-            <input type="text" th:field="*{Title}" class="textInputStyle"
-                   placeholder="Ersteller Name"/><br>
+            <input type="text" th:field="*{title}" class="textInputStyle"
+                   placeholder="Title der Abstimmung"/><br>
             </br>
             <h4>Ort</h4>
-            <input type="text" th:field="*{Location}" class="textInputStyle" placeholder="Ort"/><br>
+            <input type="text" th:field="*{location}" class="textInputStyle" placeholder="Ort"/><br>
             </br>
             <h4>Beschreibung</h4>
-            <input type="text" th:field="*{Description}" class="textInputStyle"
+            <input type="text" th:field="*{description}" class="textInputStyle"
                    placeholder="Beschreibung"/><br>
         </div>
         <div class="col-sm">
-            <h2>Neues Event Erstellen</h2></br>
             <h4>Personen</h4>
             <div id="EmailContainer">
                 <input type="text" id="PersonenEmail" class="textInputStyle"
@@ -50,11 +49,13 @@
             <button type="button" class="btn" onclick="addEmailInput()">+</button>
             <br>
         </div>
+            <!--
         <div class="col-sm">
-            </br></br></br>
             <h4>Datum</h4>
-            <input type="date" th:field="*{Date}" class="textInputStyle">
+                <input type="date" th:field="*{date}" class="textInputStyle" />
         </div>
+        -->
+            <input type="submit" />
         </form>
     </div>
 </div>

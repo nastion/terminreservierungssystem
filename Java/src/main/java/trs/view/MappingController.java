@@ -12,6 +12,9 @@ import trs.repositories.PollRepository;
 import trs.repositories.UserRepository;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Controller
@@ -24,28 +27,6 @@ public class MappingController {
 
     @Autowired
     private trs.controller.Controller controller;
-
-    @GetMapping(value = "/")
-    public ModelAndView example(@RequestParam(name="name", required=false, defaultValue="anonymous") String name,
-                                @RequestParam(name="password", required=false, defaultValue="") String password) {
-        ModelAndView modelAndView = new ModelAndView();
-
-        User user = userRepo.findUserByName(name);
-        boolean exists = false;
-        boolean pw_correct = false;
-        if (user != null) {
-            pw_correct  = user.getPassword().equals(password);
-            exists = true;
-        }
-
-        modelAndView.setViewName("dashboard");
-
-        modelAndView.addObject("password_correct", pw_correct);
-
-        modelAndView.addObject("name", name);
-        modelAndView.addObject("is_existent", exists);
-        return modelAndView;
-    }
 
     @GetMapping("/register")
     public ModelAndView register() {
@@ -60,7 +41,6 @@ public class MappingController {
     public ModelAndView confirm_register(@Valid User user) {
         ModelAndView modelAndView = new ModelAndView();
 
-        System.out.println(controller == null);
         if (controller.getUserController().createUser(user)) {
             System.out.println("Added user " + user.getName() + " with " + user.getPassword());
             modelAndView.addObject("message", "User successfully registered!");
@@ -74,23 +54,27 @@ public class MappingController {
         return modelAndView;
     }
 
-
-
-    @GetMapping("/dashboard")
+    @GetMapping(value = {"/", "/dashboard"})
     public ModelAndView dashboard() {
         ModelAndView modelAndView = new ModelAndView();
+        if (controller.getCurrentUser() == null) {
+            modelAndView.setViewName("signin");
+            User user = new User();
+            modelAndView.addObject("user", user);
+            return modelAndView;
+        }
         modelAndView.setViewName("dashboard");
         Poll poll = new Poll();
-        poll.setDescripition("Tolles Event");
+        poll.setDescription("Tolles Event");
         poll.setTitle("Event124");
-        User user = userRepo.findUserByName("user");
+        User user = controller.getCurrentUser();
         poll.setOrganisator(user);
 
         pollRepo.save(poll);
         //pollRepo.deleteAll();
         Set<Poll> polls = pollRepo.findAllByOrganisator(user);
 
-        modelAndView.addObject("name", user.getName());
+        modelAndView.addObject("user", user);
         modelAndView.addObject("polls", polls);
         return modelAndView;
     }
@@ -100,17 +84,24 @@ public class MappingController {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("eventErstellen");
         Poll poll = new Poll();
-        poll.getTitle();
-        poll.getDescripition();
-        poll.getDate();
-        poll.getLocation();
 
-        User user = new User();
-        pollRepo.save(poll);
-        Set<Poll> polls = pollRepo.findAllByOrganisator(user);
+        List<Date> all_dates = new ArrayList<>();
+        for (int i= 0; i < 10; i++)
+            all_dates.add(new Date());
 
-        modelAndView.addObject("name", user.getName());
-        modelAndView.addObject("polls", polls);
+        modelAndView.addObject("all_dates", all_dates);
+        modelAndView.addObject("poll", poll);
+        return modelAndView;
+    }
+
+    @PostMapping("/eventErstellen")
+    public ModelAndView eventErstellenPost(@Valid Poll event) {
+        ModelAndView modelAndView = new ModelAndView();
+
+        controller.getEventController().createEvent(event);
+        Poll poll = new Poll();
+
+        modelAndView.addObject("poll", poll);
         return modelAndView;
     }
 
@@ -120,8 +111,25 @@ public class MappingController {
         modelAndView.setViewName("signin");
 
         User user = new User();
+        modelAndView.addObject("user", user);
+        return modelAndView;
+    }
 
-        modelAndView.addObject("name", user.getName());
+    @PostMapping("/signin")
+    public ModelAndView login(@Valid User user) {
+        ModelAndView modelAndView = new ModelAndView();
+
+        if (controller.getUserController().login(user.getName(), user.getPassword())) {
+            modelAndView.addObject("user", controller.getCurrentUser());
+            modelAndView.addObject("polls", pollRepo.findAllByOrganisator(controller.getCurrentUser()));
+            modelAndView.setViewName("dashboard");
+        } else {
+            user = new User();
+            modelAndView.setViewName("signin");
+            modelAndView.addObject("user", user);
+            modelAndView.addObject("message", "Error: Username or Password wrong");
+        }
+
         return modelAndView;
     }
 

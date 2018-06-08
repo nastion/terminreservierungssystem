@@ -1,5 +1,6 @@
 package trs.data;
 
+import org.springframework.format.annotation.DateTimeFormat;
 import trs.controller.Controller;
 
 import javax.persistence.*;
@@ -16,7 +17,7 @@ public class Poll implements Event {
 	private Date[] dates;
 
 	private String title;
-	private String descripition;
+	private String description;
 	private String location;
 
 	@ManyToMany(mappedBy = "events")
@@ -31,11 +32,13 @@ public class Poll implements Event {
     @ManyToOne
     private User organisator;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
 
     public Poll() {
         this.teilnehmer = new HashSet<>();
         this.comments = new HashSet<>();
+        this.date = new Date();
     }
 
 	public void setDate(Date date) {
@@ -72,12 +75,12 @@ public class Poll implements Event {
 		this.dates = dates;
 	}
 
-	public String getDescripition() {
-		return descripition;
+	public String getDescription() {
+		return description;
 	}
 
-	public void setDescripition(String descripition) {
-		this.descripition = descripition;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 	public String getLocation() {

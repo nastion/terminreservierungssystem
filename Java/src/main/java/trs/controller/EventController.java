@@ -19,9 +19,16 @@ public class EventController {
 		Poll evt = new Poll();
 		evt.setOrganisator(organisator);
 		evt.setDates(dates);
-        for (User aTeilnehmer : teilnehmer) evt.addTeilnehmer(aTeilnehmer);
+		if (teilnehmer != null)
+            for (User aTeilnehmer : teilnehmer) evt.addTeilnehmer(aTeilnehmer);
 		this.controller.getPollRepo().save(evt);
 	}
+
+	public void createEvent(Poll event) {
+        if (this.controller.getCurrentUser() != null)
+            event.setOrganisator(this.controller.getCurrentUser());
+        this.controller.getPollRepo().save(event);
+    }
 
 	public void invitePeople(Event evt, User[] teilnehmer) {
         for (User aTeilnehmer : teilnehmer)
@@ -39,7 +46,7 @@ public class EventController {
 	}
 
 	public void addDescription(Poll evt, String description) {
-		evt.setDescripition(description);
+		evt.setDescription(description);
 		this.controller.getPollRepo().save(evt);
 	}
 

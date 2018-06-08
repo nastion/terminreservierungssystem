@@ -38,7 +38,7 @@ public class User implements IUser {
 
     @Override
     public void notify_User(Event event) {
-        System.out.println("Notifying user for " + ((Poll) event).getDescripition());
+        System.out.println("Notifying user for " + ((Poll) event).getDescription());
     }
     public String getName() {
         return name;
