@@ -18,5 +18,9 @@ Es soll Notifications geben, bei denen Teilnehmer über Änderungen zu Events be
 
 ## Umsetzung
 
+### Testing
+Das GUI Tesing wurde mittels Cypress realisiert. Dazu wurde von [Cypress.io](https://www.cypress.io/) Cypress heruntergeladen und entpackt. Weiters wurde Cypress gestartet und das Verzeichnis mit den Testfällen ausgewählt. Es wurde für jedes HTML-File ein eigenes Testfile erstellt. Diese prüfen nacheinander das Aufrufen der Seite, die Verfügbarkeit der einzelnen Elemente und die Inputfelder. Bei diesen wird ein Text eingegeben und geprüft, ob dieser anschließend in dem jeweiligen Feld vorhanden ist. Zusätzlich werden die Buttons auf die Verfügbarkeit untersucht und bei Verfügbarkeit geklickt. 
+
+Bei der Ausführung dieser Testcases tritt beim Aufrufen der Seite ein Fehler auf und es sind somit alle Testfälle negativ. Der Fehler ist der Script Error. Dieser dürfte aufrgund von Spring Boot entstehen und konnte bis zum aktuellen Datum nicht behoben werden.
 ## weitere Links
 [Aufgabenverteilung und Zeitaufzeichnung (Google Docs)](https://docs.google.com/spreadsheets/d/1VW-v6vQswtrJ8k9jyiZ7eBA__T3pAoMxwiI9BjSo2LU/edit?usp=sharing)
