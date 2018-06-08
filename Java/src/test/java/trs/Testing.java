@@ -1,5 +1,6 @@
 package trs;
 
+import trs.data.Comment;
 import trs.data.Poll;
 import trs.data.User;
 import org.junit.Assert;
@@ -13,6 +14,7 @@ import trs.controller.Controller;
 import trs.controller.UserController;
 
 import java.util.Date;
+import java.util.Set;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -113,6 +115,5 @@ public class Testing {
         controller.getUserController().logout();
         Assert.assertNull(controller.getCurrentUser());
     }
-
 
 }
