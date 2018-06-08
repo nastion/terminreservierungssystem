@@ -12,6 +12,9 @@ import trs.repositories.PollRepository;
 import trs.repositories.UserRepository;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Set;
 
 @Controller
@@ -62,7 +65,7 @@ public class MappingController {
         }
         modelAndView.setViewName("dashboard");
         Poll poll = new Poll();
-        poll.setDescripition("Tolles Event");
+        poll.setDescription("Tolles Event");
         poll.setTitle("Event124");
         User user = controller.getCurrentUser();
         poll.setOrganisator(user);
@@ -82,6 +85,11 @@ public class MappingController {
         modelAndView.setViewName("eventErstellen");
         Poll poll = new Poll();
 
+        List<Date> all_dates = new ArrayList<>();
+        for (int i= 0; i < 10; i++)
+            all_dates.add(new Date());
+
+        modelAndView.addObject("all_dates", all_dates);
         modelAndView.addObject("poll", poll);
         return modelAndView;
     }
@@ -90,8 +98,7 @@ public class MappingController {
     public ModelAndView eventErstellenPost(@Valid Poll event) {
         ModelAndView modelAndView = new ModelAndView();
 
-        event.setOrganisator(controller.getCurrentUser());
-
+        controller.getEventController().createEvent(event);
         Poll poll = new Poll();
 
         modelAndView.addObject("poll", poll);

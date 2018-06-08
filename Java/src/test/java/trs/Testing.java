@@ -86,7 +86,7 @@ public class Testing {
         User testUser = new User("TestUser", "TestPw");
         controller.getUserController().createUser(testUser);
         controller.getUserController().login(testUser.getName(),testUser.getPassword());
-        Assert.assertEquals(testUser, controller.getCurrentUser());
+        Assert.assertEquals(testUser.getName(), controller.getCurrentUser().getName());
     }
 
     /*
