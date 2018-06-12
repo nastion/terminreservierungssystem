@@ -14,7 +14,9 @@ public class Notification {
 	private String text;
     @NotNull
 	private String heading;
-
+/*
+    generated getter/setter
+ */
     public Long getId() {
         return id;
     }
