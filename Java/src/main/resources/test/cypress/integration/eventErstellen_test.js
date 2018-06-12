@@ -1,8 +1,17 @@
+/*
+    Diese Testcases Testen die EventErstellen Seite
+*/
 describe('Event Erstellen Page', function() {
+    /*
+        Dieser Testcase ruft die Seite auf
+    */
     it('Event erstellen aufrufen', function() {
       cy.visit('http://localhost/')             //URL muss noch geändert werden
     })
 
+    /*
+        Dieser Testcase prüft, ob die Überschrift vorhanden ist
+    */
     it('Event Erstellen Ueberschrift pruefen', function() {
         cy.visit('http://localhost/')                   //URL richtig einfügen
 
@@ -10,6 +19,9 @@ describe('Event Erstellen Page', function() {
         cy.contains('Neues Event Erstellen')
       })
 
+    /*
+        Dieser Testcase prüft ob die Inputfelder vorhanden sind
+    */
       it('Event Erstellen Inputfelder pruefen', function() {
         cy.visit('http://localhost/')                   //URL richtig einfügen
 
