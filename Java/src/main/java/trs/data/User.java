@@ -30,18 +30,21 @@ public class User implements IUser {
     public User() {
 
     }
-/*
-    @param: String username, String Password
-    Konstruktor
- */
+
+    /***
+     * Konstruktor
+     * @param name
+     * @param password
+     */
     public User(String name, String password) {
         this.setName(name);
         this.setPassword(password);
     }
-/*
-    @param: Event event
-    Notifies User with the Description from  an event
- */
+
+    /***
+     * Notifies User with the Description from  an event
+     * @param event
+     */
     @Override
     public void notify_User(Event event) {
         System.out.println("Notifying user for " + ((Poll) event).getDescription());

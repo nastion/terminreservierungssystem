@@ -42,10 +42,11 @@ Konstruktor
         this.comments = new HashSet<>();
         this.date = new Date();
     }
-/*
-    @param: date
-    Sets specific date for the Event
- */
+
+	/***
+	 * Sets specific date for the Event
+	 * @param date
+	 */
 	public void setDate(Date date) {
 	    this.date = date;
 	    this.controller.getEventController().setDate(this, date);

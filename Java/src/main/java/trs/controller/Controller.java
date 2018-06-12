@@ -25,19 +25,22 @@ public class Controller {
 	    this.setUserController(new UserController(this));
         this.setEventController(new EventController(this));
     }
-/*
-    @return: the logged User
- */
+
+    /***
+     *
+     * @return  the logged User
+     */
 	public User getCurrentUser() {
 	    return this.currentUser;
     }
 
-/*
-    @param: User
-    Sets the @param: User as the currentUser
-    @return: true
- */
-    public boolean setCurrentUser(User currentUser) {
+
+    /***
+     * Sets the @param: User as the currentUser
+     * @param currentUser
+     * @return true
+     */
+     public boolean setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
         return true;
     }
