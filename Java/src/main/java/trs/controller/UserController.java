@@ -12,21 +12,17 @@ public class UserController {
 		@param: String username, String password
 		@return: user/null
 
-<<<<<<< HEAD
 		User login needs username and a password, the function tries to find the user in the UserRepo
 		if the username exists, the password will be checked too. if the password fits the username the User is set as the current User
 	 */
 	public User login(String username, String password) {
-=======
-	public boolean login(String username, String password) {
->>>>>>> 9a62b0254124b986c8abc9eadc7f044c34f95ff5
 		User logUser = this.controller.getUserRepo().findUserByName(username);
 		if(logUser != null && logUser.getPassword().equals(password)) {
 			controller.setCurrentUser(logUser);
-			return true;
+			return logUser;
 		}
 		controller.setCurrentUser(null);
-		return false;
+		return null;
 	}
 	/*
 		@param: username, password

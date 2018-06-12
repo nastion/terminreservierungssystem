@@ -13,7 +13,9 @@ public class Comment {
 
     private IUser poster;
     private String text;
-
+/*
+Generated Getter/Setter
+ */
     public Long getId() {
         return id;
     }

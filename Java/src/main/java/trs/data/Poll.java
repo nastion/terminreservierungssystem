@@ -34,13 +34,18 @@ public class Poll implements Event {
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date date;
-
+/*
+Konstruktor
+ */
     public Poll() {
         this.teilnehmer = new HashSet<>();
         this.comments = new HashSet<>();
         this.date = new Date();
     }
-
+/*
+    @param: date
+    Sets specific date for the Event
+ */
 	public void setDate(Date date) {
 	    this.date = date;
 	    this.controller.getEventController().setDate(this, date);
@@ -56,7 +61,6 @@ public class Poll implements Event {
 	public void addTeilnehmer(User u) {
         this.teilnehmer.add(u);
 	}
-
 
 	public void remTeilnehmer(User u) {
         this.teilnehmer.remove(u);

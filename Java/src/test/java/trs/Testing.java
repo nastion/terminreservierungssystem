@@ -1,11 +1,8 @@
 package trs;
 
-<<<<<<< HEAD
 import trs.data.Comment;
 import trs.data.Poll;
 import trs.data.User;
-=======
->>>>>>> 9a62b0254124b986c8abc9eadc7f044c34f95ff5
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,14 +11,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import trs.controller.Controller;
-<<<<<<< HEAD
 import trs.controller.UserController;
 
 import java.util.Date;
 import java.util.Set;
-=======
 import trs.data.User;
->>>>>>> 9a62b0254124b986c8abc9eadc7f044c34f95ff5
+
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
