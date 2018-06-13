@@ -14,24 +14,25 @@ public class UserController {
      * f the username exists, the password will be checked too. if the password fits the username the User is set as the current User
      * @param username
      * @param password
-     * @return logUser
-     * @return null
+     * @return  true if the user got logged in correctly
+     *          false if not
      */
-	public User login(String username, String password) {
+	public boolean login(String username, String password) {
 		User logUser = this.controller.getUserRepo().findUserByName(username);
 		if(logUser != null && logUser.getPassword().equals(password)) {
 			controller.setCurrentUser(logUser);
-			return logUser;
+			return true;
 		}
 		controller.setCurrentUser(null);
-		return null;
+		return false;
 	}
 
     /***
      * Creates new UserObject and calls createUser methode
-     * @param username
-     * @param password
-     * @return user
+     * @param username the given username
+     * @param password the given password
+     * @return  true if the user got created successfully
+     *          false if not
      */
 	public boolean createUser(String username, String password) {
 		User user = new User(username, password);
@@ -41,8 +42,9 @@ public class UserController {
     /***
      * Checks if a User with the same Username already exist
      * 		if the Username is unique the User will be saved and returns true
-     * @param user
-     * @return boolean
+     * @param user the user to login
+     * @return  true if the user got created successfully
+     *          false if not
      */
 	public boolean createUser(User user) {
 	    if (this.controller.getUserRepo().findUserByName(user.getName()) == null) {
@@ -54,8 +56,8 @@ public class UserController {
 
     /***
      * Checks if a User with this username exists
-     * @param username
-     * @return user
+     * @param username the user to find
+     * @return user the user found in the database
      */
 	public User searchUser(String username) {
 		return this.controller.getUserRepo().findUserByName(username);
@@ -63,7 +65,7 @@ public class UserController {
 
     /***
      *  logs out the user
-     * @return boolean
+     * @return true
      */
 	public boolean logout() {
 		return this.controller.setCurrentUser(null);

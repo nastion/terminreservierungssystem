@@ -6,6 +6,9 @@ import trs.data.User;
 import trs.repositories.PollRepository;
 import trs.repositories.UserRepository;
 
+/**
+ * Controller for controlling everything
+ */
 @Component
 public class Controller {
     @Autowired
@@ -13,19 +16,23 @@ public class Controller {
     @Autowired
     private PollRepository pollRepo;
 
+    //For login
     private User currentUser;
 
 	private EventController eventController;
 
 	private UserController userController;
-/*
-    constructor
- */
+
+	/**
+        constructor
+     */
 	public Controller() {
 	    this.setUserController(new UserController(this));
         this.setEventController(new EventController(this));
     }
-
+    /*
+        Generated Getter/Setter
+    */
     /***
      *
      * @return  the logged User
@@ -37,16 +44,14 @@ public class Controller {
 
     /***
      * Sets the @param: User as the currentUser
-     * @param currentUser
+     * @param currentUser 'log's in a user
      * @return true
      */
      public boolean setCurrentUser(User currentUser) {
         this.currentUser = currentUser;
         return true;
     }
-/*
-    Generated Getter/Setter
- */
+
     public EventController getEventController() {
         return eventController;
     }

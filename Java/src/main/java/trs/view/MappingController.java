@@ -28,6 +28,10 @@ public class MappingController {
     @Autowired
     private trs.controller.Controller controller;
 
+    /**
+     * Get-Mapping for registering a user
+     * @return the ModelAndView for Spring
+     */
     @GetMapping("/register")
     public ModelAndView register() {
         ModelAndView modelAndView = new ModelAndView();
@@ -37,6 +41,12 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Post-Mapping for registering a user<br />
+     * Registers the user
+     * @param user the user to register
+     * @return the ModelAndView for Spring
+     */
     @PostMapping("/register")
     public ModelAndView confirm_register(@Valid User user) {
         ModelAndView modelAndView = new ModelAndView();
@@ -54,6 +64,10 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Get-Mapping for the dashboard
+     * @return the ModelAndView for Spring
+     */
     @GetMapping(value = {"/", "/dashboard"})
     public ModelAndView dashboard() {
         ModelAndView modelAndView = new ModelAndView();
@@ -79,6 +93,10 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Get-Mapping for creating an event
+     * @return the ModelAndView for spring
+     */
     @GetMapping("/eventErstellen")
     public ModelAndView eventErstellen() {
         ModelAndView modelAndView = new ModelAndView();
@@ -94,6 +112,12 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Post-Mapping for creating an event<br />
+     * Creates the event
+     * @param event the event to create
+     * @return the ModelAndView for Spring
+     */
     @PostMapping("/eventErstellen")
     public ModelAndView eventErstellenPost(@Valid Poll event) {
         ModelAndView modelAndView = new ModelAndView();
@@ -105,6 +129,10 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Get-Mapping for logging in
+     * @return the ModelAndView for Spring
+     */
     @GetMapping("/signin")
     public ModelAndView signin() {
         ModelAndView modelAndView = new ModelAndView();
@@ -115,6 +143,11 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Post-Mapping for logging in
+     * @param user the user to login
+     * @return the ModelAndView for Spring
+     */
     @PostMapping("/signin")
     public ModelAndView login(@Valid User user) {
         ModelAndView modelAndView = new ModelAndView();
@@ -133,6 +166,10 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Get-Mapping for the polls
+     * @return the ModelAndView for Spring
+     */
     @GetMapping("/eventAbstimmen")
     public ModelAndView eventAbstimmen() {
         ModelAndView modelAndView = new ModelAndView();
@@ -144,6 +181,10 @@ public class MappingController {
         return modelAndView;
     }
 
+    /**
+     * Get-Mapping for the result of an event
+     * @return the ModelAndView for Spring
+     */
     @GetMapping("/eventResult")
     public ModelAndView eventResult() {
         ModelAndView modelAndView = new ModelAndView();

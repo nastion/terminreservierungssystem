@@ -10,7 +10,7 @@ public class Comment {
     @Id
     @GeneratedValue
     private Long id;
-
+    
     private IUser poster;
     private String text;
 /*
